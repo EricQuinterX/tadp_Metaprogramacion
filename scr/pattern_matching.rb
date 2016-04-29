@@ -16,6 +16,11 @@ class Matcher
   def type
 
   end
+
+  def duck_typing(*args, obj)
+    return args.all? { |method| obj.respond_to? method}
+  end
+
 end
 
 
